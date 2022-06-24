@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/plan_styles.css" />
+    <title>ITCH Docente - Planeación del curso</title>
+  </head>
+  <body>
+    <!--Capa de pre-planación-->
+    <section class="pre-plan">
+      <a class="icono-regresar" href="menu.html"></a>
+      <section class="pre-contenedor">
+        <section class="pre-info">
+          <h1 class="titulo-2">EMPECEMOS CON LA PLANEACIÓN</h1>
+          <p>Lenguaje de interfaz</p>
+          <p>SCC-1014</p>
+          <p>Departamento De Sistemas Y Computación</p>
+          <section class="subcontenedor">
+            <p>Horas Teóricas: <span>2</span></p>
+            <p>Horas Prácticas: <span>3</span></p>
+            <p>Periodo: <span>Enero-Junio 2022</span></p>
+          </section>
+        </section>
+        <section class="pre-btns">
+          <button id="btn-comenzar" class="btn-comenzar">Comenzar Planeación</button>
+          <i class="icono-cargar">cargar</i>
+          <i class="icono-print">print</i>
+        </section>
+      </section>
+    </section>
+    
+    <!--Colapsable-->
+    <section class="info">
+      <!--Boton de despliegue-->
+      <button id="colapsable" class="colapsable titulo-3" type="button">
+        <i class="icono-info"></i>
+        Información general
+      </button>
+      <!--Contenido plegado-->
+      <section id="contenedor" class="contenedor texto">
+        <p>Lenguaje de interfaz</p>
+        <p>SCC-1014</p>
+        <p>Departamento De Sistemas Y Computación</p>
+        <div class="subcontenedor">
+          <p>Horas Teóricas: <span>2</span></p>
+          <p>Horas Prácticas: <span>3</span></p>
+          <p>Periodo: <span>Enero-Junio 2022</span></p>
+        </div>
+      </section>
+    </section>
+    <!--Navegador Steps-->
+    <nav class="nav">
+      <!--Ir anterior-->
+      <a class="icono-regresar" href="menu.html"></a>
+      <!--Barra de progreso-->
+      <ul>
+        <li class="progreso uno activo">
+          <a  class="link" href="/views/act_aprend.html" target="tablas"></a>
+        </li>
+        <li class="progreso dos">
+          <a  class="link" href="/views/act_ensena.html" target="tablas"></a>
+        </li>
+        <li class="progreso tres">
+          <a  class="link" href="/views/comp_gen.html" target="tablas"></a>
+        </li>
+        <li class="progreso cuatro">
+          <a  class="link" href="/views/Ind_alcance.html" target="tablas"></a>
+        </li>
+        <li class="progreso cinco">
+          <a  class="link" href="/views/eval_formativa.html" target="tablas"></a>
+        </li>
+        <li class="progreso seis">
+          <a class="link" href="/views/apy_didacticos.html" target="tablas"></a>
+        </li>
+        <li class="progreso siete">
+          <a class="link" href="/views/cal_temas.html" target="tablas"></a>
+        </li>
+        <li class="progreso ocho">
+          <a class="link" href="/views/cal_evaluaciones.html" target="tablas"></a>
+        </li>
+      </ul>
+    </nav>
+    <!--Mostrar x tabla-->
+    <iframe
+      id="i-tabla"
+      name="tablas"
+      src="/views/act_aprend.html"
+      frameborder="0"
+      width="100%"
+      height="84%"
+      allowfullscreen
+      allowforms
+    ></iframe> 
+    <!--Botones-->
+    <section class="botones">
+      <input id="btn-siguiente" class="boton" type="submit" value="Siguiente"></input>
+      <i class="icono-ayuda">ayuda</i>
+    </section>  
+    <!--Scripts-->
+    <script type="text/JavaScript" src="js/colapsable.js"></script>
+    <script type="text/JavaScript" src="js/bar_progreso.js"></script>
+    <script type="text/JavaScript" src="js/siguiente_iframe.js"></script>
+    <script type="text/JavaScript" src="js/btn_comenzar.js"></script>
+  </body>
+</html>

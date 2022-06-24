@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/login.css" />
+    <title>ITCH Docente - Iniciar Sesión</title>
+  </head>
+  <body>
+    <main>
+      <!--Encabezado-->
+      <header class="encabezado">
+        <h1 class="titulo-2">Ingresar Cuenta</h1>
+        <p class="texto-falso">
+          Bienvenido a la plataforma docente del Instituto Tecnológico de
+          Chetumal
+        </p>
+      </header>
+      <!--Imagen-->
+      <section class="imagen">
+        <figure>
+          <img
+            src="https://img.freepik.com/foto-gratis/entrenador-pizarra_1098-12970.jpg?w=740&t=st=1653421070~exp=1653421670~hmac=538b6027e93cb183f05f3aa563339473d3e75574223bea209bd5bd0a0dfaeb64"
+            alt="Foto de capacitación"
+          />
+          <figcaption>
+            Foto de capacitacion creado por pressfoto - www.freepik.es
+          </figcaption>
+        </figure>
+      </section>
+      <!--Formulario-->
+      <section class="formulario">
+        <form action="menu.html">
+          <!--Input número de tarjeta-->
+          <div>
+            <i class="ntarjeta-icono"></i>
+            <input
+              id="numTarjeta"
+              class="texto-falso"
+              type="text"
+              name="numTarjeta"
+              placeholder="Número de tarjeta"
+              required
+            />
+          </div>
+          <!--Input contraseña-->
+          <div>
+            <i class="candado-icono"></i>
+            <input
+              id="nip"
+              class="texto-falso"
+              type="password"
+              name="nip"
+              placeholder="NIP"
+              required
+            />
+          </div>
+          <!--Input enviar-->
+          <div>
+            <input
+              id="btnEnviar"
+              class="titulo-2"
+              type="submit"
+              value="Iniciar sesión"
+            />
+          </div>
+        </form>
+      </section>
+    </main>
+    <!--Script de validación de los inputs-->
+    <script type="text/JavaScript" src="js/validacion_login.js"></script>
+  </body>
+</html>

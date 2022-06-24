@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+  }
+
+/* Áreas */
+
+.contenedor{  
+    width: 1150px;
+    height: 550px;
+    display: grid;
+    grid-template-columns: 3fr 0.25fr;
+    grid-template-rows: 40px 1fr;
+    grid-template-areas:
+    "titulo titulo"
+    "indicadores boton"
+}
+
+.titulo{
+    grid-area: titulo;
+    text-transform: uppercase;
+    font-size: 32px;
+    padding: 0 10px;
+}
+
+.icono{
+    grid-area: boton;
+    content: url('https://api.iconify.design/carbon/add-filled.svg?color=%23f6f6f6&height=64');
+    cursor: pointer;
+    background: #0096C7;
+    border-radius: 35px;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.6);
+    margin: 10px 10px 0 0;
+}
+
+.area-indicadores{
+    grid-area: indicadores;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Pestañas */
+
+.contenedor-pestañas{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-height: 550px;
+    overflow-y: scroll;
+}
+
+.contenedor-pestañas::-webkit-scrollbar{
+    display: none;
+}
+
+.pestaña{
+    padding: 20px 15px;
+    text-align: center;
+    background-color: #333F4D;
+    color: white;
+    cursor: pointer;
+}
+
+/* Contenido */
+
+.contenido{
+    margin: 10px;
+    display: none;
+}
+
+/* Estados */
+.pestaña.activo{
+    background: #0096C7;
+}
+
+.contenido.activo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 520px;
+    overflow: scroll;
+}
+
+.contenido.activo::-webkit-scrollbar{
+    display: none;
+}
+
+/* Indicadores */
+.indicador{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.pad{
+    padding: 25px;
+    cursor: pointer;
+    border-radius: 30px;
+    margin: 5px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.pad.seleccionado{
+    background: #ff6161;
+}
+
+.descripción{
+    padding: 13px 15px;
+    font-size: 20px;
+    height: 2.5em;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    resize: none;
+    border: none;
+    background: #E2E2E2;
+}
+
+.descripción:focus{
+    outline: none;
+}
+
+.descripción::-webkit-scrollbar{
+    width: 10px;
+}
+
+.descripción::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: #a5a5a5;
+}
+
+/* Pesos */
+.peso{
+    width: 60px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.numero{
+    font-size: 22px;
+    width: 100%;
+    border: none;
+    color: #0096C7;
+    text-align: center;
+}
+
+.decremento{
+    cursor: pointer;
+    padding: 0 17.5px;
+    content: url('https://api.iconify.design/ant-design/caret-up-filled.svg?color=%23333f4d&height=25&flip=vertical');
+}
+
+.incremento{
+    cursor: pointer;
+    padding: 0 17.5px;
+    content: url('https://api.iconify.design/ant-design/caret-up-filled.svg?color=%23333f4d&height=25');
+}

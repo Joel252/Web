@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+}
+
+:root {
+  --gris-muy-claro: #e2e2e2;
+  --gris-claro: rgba(140, 151, 169);
+  --gris-claro-50: rgba(140, 151, 169, 0.5);
+  --gris-oscuro: #333f4d;
+  --gris-oscuro-50: rgb(51, 63, 77, 0.92);
+  --azul-claro: #48cae4;
+  --azul-2: #168aad;
+  --azul: #0077b6;
+  --azul-oscuro: #184e77;
+}
+
+.texto-falso {
+  font-family: "Quicksand";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.texto {
+  font-family: "Quicksand";
+  font-weight: 100;
+  font-size: 15px;
+  color: var(--gris-oscuro);
+}
+
+.titulo-2 {
+  margin-bottom: 20px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  color: #0096c7;
+}
+
+.titulo-3 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--gris-oscuro);
+}
+
+.titulo-4 {
+  font-family: "Raleway";
+  font-size: 12px;
+  color: black;
+}
+
+input[type="submit"] {
+  margin-top: 25px;
+  margin-left: 40px;
+  cursor: pointer;
+  border-radius: 20px;
+  background: var(--azul-2);
+  color: white;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  font-size: 25px;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  background: var(--azul-oscuro);
+}

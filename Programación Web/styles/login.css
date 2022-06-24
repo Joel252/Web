@@ -1,0 +1,148 @@
+/* Establecer posicionamiento */
+main {
+  display: grid;
+  grid-template-columns: repeat(5, max(1fr));
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "imagen imagen imagen encabezado encabezado"
+    "imagen imagen imagen formulario formulario"
+    "imagen imagen imagen formulario formulario";
+}
+
+.encabezado {
+  grid-area: encabezado;
+  display: block;
+  align-self: end;
+  text-align: center;
+  margin: 0px 30px 0px 30px;
+}
+
+.formulario {
+  grid-area: formulario;
+  margin-top: 65px;
+}
+
+.imagen {
+  grid-area: imagen;
+}
+
+/* Dimensiones de la imagen */
+img {
+  width: 95%;
+  height: 100vh;
+  min-height: 700px;
+}
+
+figcaption {
+  display: none;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+input {
+  width: 60%;
+  height: 42px;
+  margin: auto 30px 15px 10px;
+  padding-left: 10px;
+  border: none;
+  background: rgba(196, 196, 196, 0.4);
+  border-left: solid var(--azul-2) 10px;
+}
+
+input:focus {
+  color: black;
+  font-weight: bold;
+  outline: none;
+}
+
+.ntarjeta-icono {
+  content: url("https://api.iconify.design/la/id-card.svg?color=%230096c7&height=35");
+  margin-bottom: 15px;
+}
+
+.candado-icono {
+  content: url("https://api.iconify.design/clarity/lock-line.svg?color=%230096c7&height=32&width=35");
+  margin-bottom: 15px;
+}
+
+.error {
+  border-right: solid red 2px;
+  border-top: solid red 2px;
+  border-bottom: solid red 2px;
+}
+
+.error::placeholder {
+  color: red;
+}
+
+/* Media queries*/
+@media only screen and (max-width: 895px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "encabezado"
+      "formulario"
+      "formulario";
+  }
+  .imagen {
+    display: none;
+  }
+  .formulario {
+    margin-top: 30px;
+  }
+  .encabezado {
+    margin-top: 70px;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .titulo2 {
+    font-size: 35px;
+  }
+  .texto-falso {
+    font-size: 13px;
+  }
+  input[type="submit"] {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "imagen imagen imagen encabezado encabezado encabezado"
+      "imagen imagen imagen formulario formulario formulario"
+      "imagen imagen imagen formulario formulario formulario";
+  }
+  img {
+    width: 100%;
+  }
+
+  input {
+    height: 80px;
+  }
+  .texto-falso {
+    font-size: 30px;
+  }
+  .titulo-2 {
+    font-size: 70px;
+  }
+  input[type="submit"] {
+    font-size: 40px;
+  }
+}

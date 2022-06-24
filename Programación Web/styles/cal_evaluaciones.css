@@ -1,0 +1,177 @@
+header {
+  margin: 30px 0px 20px 150px;
+}
+
+main {
+  margin-top: 30px;
+  height: 70vh;
+}
+
+.texto {
+  color: white;
+}
+
+.texto-falso {
+  font-size: 14px;
+}
+
+/* header con selector*/
+.grid-header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "titulo titulo selector";
+}
+
+.titulo-header {
+  grid-area: titulo;
+}
+
+.selector {
+  grid-area: selector;
+  width: 35%;
+  background-color: var(--azul-2);
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.selector option {
+  color: black;
+}
+
+/* Contenedor-eval */
+.contenedor-add {
+  margin: 10px auto;
+  height: 16%;
+  width: 70%;
+}
+
+.flex-left {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+button {
+  height: 90%;
+  width: 5%;
+  cursor: pointer;
+  background-color: var(--gris-muy-claro);
+  border: solid 1px white;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 100px;
+}
+
+.contenedor-eval {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  margin-left: 10px;
+}
+
+textarea {
+  height: 90%;
+  width: 20%;
+  resize: none;
+  background-color: var(--azul-2);
+  text-align: center;
+  padding: 10px;
+  margin: 1px;
+  box-sizing: border-box;
+}
+
+/* Tabla */
+.t-centrar {
+  margin: 0 auto;
+  width: 60%;
+  height: 70%;
+}
+
+.overflow-xy {
+  overflow-x: scroll;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-calendar {
+  width: 100%;
+  height: 15%;
+  background-color: var(--gris-oscuro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-calendar p {
+  background: none;
+}
+
+/*Celdas tabla*/
+.t-days {
+  height: 85%;
+  width: 100%;
+  background-color: var(--gris-muy-claro);
+}
+
+table {
+  width: 100vw;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: var(--gris-oscuro);
+  border-collapse: collapse;
+}
+
+td {
+  height: 8vh;
+  width: 10vw;
+  border-collapse: collapse;
+  border-bottom: 1px solid var(--gris-oscuro);
+  background-color: var(--gris-muy-claro);
+}
+
+td.tema {
+  position: fixed;
+  width: auto;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: end;
+  color: var(--gris-oscuro);
+}
+
+td textarea {
+  height: 80%;
+  width: 100%;
+  justify-self: center;
+  border-radius: 10px;
+  padding: 0px;
+}
+
+/* Iconos*/
+.icon-add {
+  content: url("https://api.iconify.design/akar-icons/plus.svg?color=%23168aad");
+  background-color: var(--gris-muy-claro);
+  height: 70%;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  textarea.texto {
+    padding: 0px;
+    font-size: 10px;
+  }
+
+  .titulo-4 {
+    font-size: 10px;
+  }
+}

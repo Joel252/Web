@@ -1,0 +1,316 @@
+body {
+  height: 86vh;
+}
+
+/* Capa pre-planeación */
+.pre-plan {
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background: none;
+  background-color: var(--gris-oscuro-50);
+  backdrop-filter: blur(8px);
+  color: white;
+}
+
+.pre-contenedor {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "info"
+    "btns";
+  height: 90%;
+  align-items: center;
+  background: none;
+}
+
+.pre-info {
+  grid-area: info;
+}
+
+.pre-plan .pre-info,
+.pre-plan .pre-btns {
+  width: 100%;
+  text-align: center;
+  background: none;
+}
+
+.pre-plan p {
+  font-weight: bold;
+  margin: 20px;
+}
+
+.pre-plan .subcontenedor {
+  display: inline-flex;
+  width: 85%;
+}
+
+.pre-plan .subcontenedor p {
+  margin: 6px;
+}
+
+.pre-plan .subcontenedor span {
+  margin-top: 8px;
+  font-weight: normal;
+}
+
+section .pre-btns {
+  grid-area: btns;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+
+h1.titulo-2 {
+  color: white;
+  font-weight: bolder;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: none;
+}
+
+.btn-comenzar {
+  width: 180px;
+  height: 40px;
+  color: white;
+  background-color: var(--azul-2);
+  border-radius: 10px;
+  border-style: none;
+  font-size: 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
+}
+
+.btn-comenzar:hover {
+  background-color: var(--azul-oscuro);
+}
+
+.icono-cargar {
+  content: url("https://api.iconify.design/ant-design/upload-outlined.svg?color=white&height=20");
+  background-color: var(--gris-claro);
+  border-radius: 50%;
+  padding: 0.4rem;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: 10px;
+  margin-left: 20px;
+}
+
+.icono-print {
+  content: url("https://api.iconify.design/fluent/document-pdf-16-regular.svg?color=white&height=20");
+  background-color: var(--gris-claro);
+  border-radius: 50%;
+  padding: 0.4rem;
+  cursor: pointer;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin: 10px;
+}
+
+/* Colapsable de info general*/
+.colapsable {
+  background-color: white;
+  cursor: pointer;
+  padding: 6px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--gris-claro-50);
+  text-align: left;
+  height: 100%;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: rgb(51, 63, 77, 0.9);
+}
+
+.subcontenedor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 80%;
+  margin: 2px 0px 1px 0px;
+  background-color: white;
+  border-radius: 10px;
+  color: var(--gris-oscuro);
+  text-align: center;
+}
+
+p {
+  margin: 2px;
+  background: none;
+}
+
+p span {
+  display: flex;
+  justify-content: center;
+  background: none;
+}
+
+.icono-info {
+  content: url("https://api.iconify.design/subway/paragraph.svg?color=%23333f4d&height=15&width=40");
+  background: none;
+}
+
+/* Bloque de navegación */
+.nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "atras bar-progreso vacio";
+  width: 100%;
+  height: 50px;
+  background-color: var(--gris-oscuro);
+}
+
+/* Botón de ir atrás */
+.icono-regresar {
+  content: url("https://api.iconify.design/eva/arrow-back-fill.svg?color=white&width=34&height=50");
+  margin-left: 15px;
+  cursor: pointer;
+  grid-area: atras;
+  background: none;
+}
+
+/* Barra de progreso */
+ul {
+  width: 100%;
+  grid-area: bar-progreso;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+
+ul li {
+  list-style: none;
+  height: 18px;
+  width: 18px;
+  background-color: var(--gris-claro-50);
+  border-radius: 50%;
+  margin: 0px 20px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+}
+
+ul li::after {
+  border: dashed 1px var(--gris-claro-50);
+  margin-top: 8px;
+  content: " ";
+  position: absolute;
+  width: 36px;
+  right: 19px;
+}
+
+.uno::after {
+  border: none;
+}
+
+ul .activo {
+  background-color: var(--azul-claro);
+  height: 26px;
+  width: 26px;
+  display: flex;
+  align-items: center;
+}
+
+ul .activo::after {
+  margin-top: 0px;
+  width: 35px;
+  right: 27px;
+}
+
+ul .completado {
+  background-color: #67d880;
+  height: 18px;
+  width: 18px;
+}
+
+ul .completado::after {
+  width: 36px;
+  right: 19px;
+}
+
+.link {
+  width: 25px;
+  height: 25px;
+  background: none;
+}
+
+/*Contenedor de botones*/
+.botones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "vacio boton ayuda";
+}
+
+input[type="submit"] {
+  width: 200px;
+  height: 40px;
+  grid-area: boton;
+  justify-self: center;
+  background-color: var(--azul);
+}
+
+.icono-ayuda {
+  content: url("https://api.iconify.design/akar-icons/question-fill.svg?color=%23333f4d&height=40");
+  grid-area: ayuda;
+  cursor: pointer;
+  justify-self: end;
+  align-self: end;
+  margin-right: 40px;
+}
+
+/* Media queries*/
+@media only screen and (min-width: 1980px) {
+  .colapsable {
+    height: 60px;
+    font-size: 28px;
+  }
+  .icono-info {
+    content: url("https://api.iconify.design/subway/paragraph.svg?color=%23333f4d&height=25&width=40");
+  }
+
+  .nav {
+    height: 70px;
+  }
+
+  .icono-regresar {
+    content: url("https://api.iconify.design/eva/arrow-back-fill.svg?color=white&width=54&height=70");
+  }
+}
+
+@media only screen and (min-width: 1980px) {
+  iframe {
+    height: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .icono-regresar {
+    display: none;
+  }
+  ul li {
+    margin: 0 10px;
+  }
+  ul li::after {
+    width: 17px;
+  }
+  ul .activo::after {
+    width: 17px;
+  }
+  ul .completado::after {
+    width: 17px;
+  }
+}

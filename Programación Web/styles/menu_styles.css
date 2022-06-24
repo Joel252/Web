@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+.encabezado{
+    background-color: #292929;
+    height: 70px;
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    align-items: center;
+}
+
+/* Fuentes */
+.texto {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.secundario{
+    font-size: 32px;
+}
+
+.principal{
+    text-transform: uppercase;
+    font-size: 48px;
+}
+
+.card{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    margin: 12px 0;
+}
+
+/* Iconos */
+.btn_volver{ 
+    content : url('https://api.iconify.design/eva/arrow-back-fill.svg?color=white&height=40');
+}
+
+.icono.uno{
+    content: url('https://api.iconify.design/akar-icons/copy.svg?color=white&height=100');
+}
+
+.icono.dos{
+    content: url('https://api.iconify.design/ant-design/calendar-outlined.svg?color=white&height=100');
+}
+
+.icono.tres{
+    content: url('https://api.iconify.design/fluent/clipboard-bullet-list-ltr-16-regular.svg?color=white&height=100');
+}
+
+.icono.cuatro{
+    content: url('https://api.iconify.design/carbon/user-avatar.svg?color=white&height=100');
+}
+/* Etiquetas y clases */
+header p {
+    color: white;
+    text-decoration: underline;
+}
+ /* Banner */
+.banner{
+    width: 100%;
+    height: 500px;
+    background-image:linear-gradient(rgba(0,0,0, 0.6),rgba(0,0,0, 0.6)), url("https://conisoft.org/2020/assets/images/headerChe.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.banner .contenedor{
+    max-width: 1000px;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items: center;
+    flex-basis: 80%;
+}
+
+.banner .contenedor p{
+    color: white;
+}
+
+.banner .contenedor .principal {
+    max-width: 70%;
+}
+
+.banner .contenedor .secundario {
+    max-width: 90%;
+}
+ /* Menú */
+.menu::before{
+    content: url('https://api.iconify.design/noto/raccoon.svg?color=white&height=100');
+    position: absolute;
+    top: -85px;
+    left: calc(50% - 50px);
+}
+
+.menu{
+    position: relative;
+}
+
+.menu > .secundario{
+    margin: 40px 0;
+}
+
+.menu .contenedor{
+    width: 90%;
+    margin: auto; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit,300px);
+    column-gap: 32px;
+    justify-content: center;
+}
+ /* Tarjetas */
+.tarjeta {
+    position: relative;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    height: 240px;
+}
+.tarjeta.uno{
+    background-image:linear-gradient(rgba(0,0,0, 0.29),rgba(0,0,0, 0.29)), url("https://images.unsplash.com/photo-1527219525722-f9767a7f2884?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80");
+    background-size: cover;
+}
+
+.tarjeta.dos{
+    background-image:linear-gradient(rgba(0,0,0, 0.29),rgba(0,0,0, 0.29)), url("https://images.unsplash.com/photo-1435527173128-983b87201f4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FsZW5kYXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+}
+
+.tarjeta.tres{
+    background-image:linear-gradient(rgba(0,0,0, 0.29),rgba(0,0,0, 0.29)), url("https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGlzdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+}
+
+.tarjeta.cuatro{
+    background-image:linear-gradient(rgba(0,0,0, 0.29),rgba(0,0,0, 0.29)), url("https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHByZXNlbnRhdGlvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+}
+
+.tarjeta .secundario {
+    color: white;
+    margin: 5px;
+}
+
+.tarjeta .icono{
+    position: absolute;
+    top: 25%;
+    transition: 0.3s;
+}
+
+.tarjeta .contenido {
+    position: absolute;
+    bottom: 0;
+    height: 45px;
+    width: 100%;
+    background: rgba(22, 138, 173, 0.5);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.tarjeta .contenido a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #34A0A4;
+}
+
+.tarjeta:hover .icono{
+    opacity: 0;
+}
+
+.tarjeta:hover .contenido{
+    height: 100%;
+}
+
+.contenido .card:hover {
+background-color: #168AAD;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 500px) {
+    .banner .contenedor .secundario{
+        display: none;
+    }
+
+    .principal{
+        font-size: 32px;
+    }
+    
+    .encabezado{
+        height: 40px;
+    }
+
+    .banner{
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 1072px) {
+    .banner .contenedor .secundario{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+    .banner{
+        height: 350px;
+    }
+    
+    .menu .contenedor{ row-gap: 32px;} 
+
+    .menu > .secundario{
+        margin: 14px 0;
+    }
+}
+
+@media only screen and (min-width: 1450px) { 
+    .banner{
+        height: 350px;
+    }
+
+    .menu > .secundario{
+        margin: 20px 0;
+    }
+
+    .menu::before{
+        top: -80px;
+    }
+} 
+
+@media only screen and (min-width: 1870px) { 
+    .banner{
+        height: 400px;
+    }
+
+    .menu > .secundario{
+        margin: 40px 0;
+    }
+    .menu .contenedor{column-gap: 100px;} 
+
+    .menu::before{
+        top: -100px;
+    }
+} 

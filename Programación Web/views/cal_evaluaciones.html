@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/general.css" />
+    <link rel="stylesheet" href="/styles/cal_evaluaciones.css" />
+    <title>ITCH Docente - Planeación del curso (Paso 8)</title>
+  </head>
+  <body>
+    <!--Titulo-->
+    <header class="titulo-4 grid-header">
+      <h1 class="titulo-header">CALENDARIZACIÓN DE EVALAUCIONES</h1>
+      <select class="selector texto" name="" id="">
+        <option>ISC A</option>
+        <option>ISC B</option>
+        <option>ISC C</option>
+      </select>
+    </header>
+    <!--Tabla-->
+    <main>
+      <!--Evaluciones-->
+      <section class="contenedor-add flex-left">
+        <button id="btn-add">
+          <i class="icon-add"></i>
+        </button>
+        <section id="lista" class="contenedor-eval">
+          <textarea id="eval-0" class="evaluacion texto elemento" draggable="true">Programas</textarea>
+        </section>
+      </section>
+      <!--Scheduler Timeline-->
+      <section class="t-centrar">
+        <section class="header-calendar texto">
+          <p>Mayo</p>
+        </section>
+        <!--Celdas-->
+        <section class="overflow-xy t-days">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th class="texto">L20</th>
+                <th class="texto">M21</th>
+                <th class="texto">Mi22</th>
+                <th class="texto">J23</th>
+                <th class="texto">V24</th>
+                <th class="texto">S25</th>
+                <th class="texto">D26</th>
+                <th class="texto">L27</th>
+                <th class="texto">M28</th>
+                <th class="texto">Mi29</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="texto-falso tema">
+                  Introducción al lenguaje ensamblador
+                </td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+              </tr>
+              <tr>
+                <td class="texto-falso tema">Programación básica</td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+              </tr>
+              <tr>
+                <td class="texto-falso tema">Modularización</td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+              </tr>
+              <tr>
+                <td class="texto-falso tema">Programación de dispositivos</td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+                <td class="lista-destino"></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </section>
+    </main>
+    <!--Scripts-->
+    <script type="text/JavaScript" src="/js/insert.js"></script>
+    <script type="text/JavaScript" src="/js/dragdropCopy.js"></script>
+  </body>
+</html>
